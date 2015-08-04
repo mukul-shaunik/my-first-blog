@@ -50,8 +50,10 @@ class RegForm(models.Model):
 	def setMother_name(self,mother_name):
 		return self.mother_name
 	def setCity(self,city):
-		return self.city
+		self.city=city
 	def setState(self,state):
 		return self.state
 	def setAddress(self,p_address):
 		return self.p_address
+	def __str__(self):
+		return self.name
