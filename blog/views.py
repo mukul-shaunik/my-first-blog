@@ -17,6 +17,6 @@ def reg_form(request):
 		form=PostForm()
 		return render(request, 'blog/form.html',{'form':form})
 def post_detail(request,pk):
-	post = get_object_or_404(Post, pk=pk)
+	post = get_object(Post, pk=pk)
 	return render(request, 'blog/post_detail.html', {'post':post})
 
